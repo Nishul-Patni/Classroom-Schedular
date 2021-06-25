@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="../public/style/style.css">
+    <link rel="stylesheet" href="../public/style/input.css">
+    <link rel="stylesheet" href="../public/style/delete.css">
+    <link rel="stylesheet" href="../public/style/addButtom.css">
+</head>
+
+<body>
+    <div id="container">
+        <aside id="user">
+            <div id="up">
+                <div id="avatar-container">
+                    <img src="../public/images/avatarSamlple.png" alt="Avtar" class="w-100">
+                </div>
+                <h3 class="t" id="name">Name</h3>
+            </div>
+            <div id="down">
+                <div id="today-event">
+                </div>
+            </div>
+        </aside>
+        <div id="calendar-container">
+            <div id="calendar">
+                <nav id="navbar">
+                    <h3 class="sh">
+                        Calendar
+                    </h3>
+                    <div id="change">
+                        <button class="sh btn" id="back">&lt;</button>
+                        <h3 class="sh" id="month-display">Month, 2021</h3>
+                        <button class="sh btn" id="next">&gt;</button>
+                    </div>
+                    <select name="filters" id="filters" class="sh">
+                        <option value="month" class="t">Month</option>
+                        <option value="week" class="t">Week</option>
+                        <option value="day" class="t">Day</option>
+                        <option value="events" class="t">Events</option>
+                      </select>
+                </nav>
+                <div id="month">
+                    <div id="days-container">
+                        <div class="day st">Sun</div>
+                        <div class="day st">Mon</div>
+                        <div class="day st">Tue</div>
+                        <div class="day st">Wed</div>
+                        <div class="day st">Thu</div>
+                        <div class="day st">Fri</div>
+                        <div class="day st">Sat</div>
+                    </div>
+                    <!-- month view -->
+                    <div class="dates">
+                        <!-- <div class="date date-t">1</div>
+                        <div class="event"><span class="time">12:00</span><sapn class="event-title">t1</sapn></div> -->
+                    </div>
+                    <!-- week view -->
+                    <div class="dates" style="display: none;">
+                        <!-- <div class="day7 day-t">1</div> -->
+                    </div>
+                </div>
+
+                <div id="days" style="display: none;">
+                    <div id="day">
+                        <div id="today-detail">
+                            <div id="num" class="day-t">
+                            </div>
+                            <div id="text" class="day-t">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="event-view">
+                    <!-- <div id="event-card">
+                        <div id="event-view-title">Title</div>
+                    </div> -->
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+    <div id="add-button" onclick="openInput('')">
+        +
+    </div>
+
+    <div id="input-container" style="display: none;">
+        <div id="input">
+            <div id="input-area" >
+                <input type="text" name="title" id="title" class="no-border" placeholder="Enter Title">
+                <div id="time-date">
+                    <input type="time" name="starttime" class="no-border time" id="start-time">
+                    <input type="time" name="endTime" class="no-border time" id="end-time">
+                    <input type="date" name="date" id="date" class="no-border">
+                </div>
+
+            </div>
+            <div class="button-area">
+                <button id="save">Save</button>
+                <button id="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="delete-container-background" style="display: none;">
+        <div id="delete-container">
+            <div id="delete-event-view"></div>
+            <div class="button-area">
+                <button id="delete">Delete</button>
+                <button id="cancel-delete">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="../public/script/eventView.js"></script>
+    <script src="../public/script/delete.js"></script>
+    <script src="../public/script/input.js"></script>
+    <script src="../public/script/Month.js"></script>
+    <script src="../public/script/Week.js"></script>
+    <script src="../public/script/day.js"></script>
+    <script src="../public/script/main.js"></script>
+</body>
+
+</html>

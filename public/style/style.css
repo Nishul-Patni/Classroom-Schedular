@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Ubuntu', sans-serif; */
+
+*{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0rem;
+    padding: 0rem;
+}
+.h{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3rem;
+    color: white;
+    font-weight: 200;
+}
+.sh{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 200;
+}
+.t{
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.5rem;
+    color: white;
+}
+.st{
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.753);
+    font-weight: 200;
+    font-family: 'Baloo 2', cursive;
+}
+.date-t{
+    font-size: 1.5rem;
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    font-weight: 200;
+    text-align: center;
+}
+.day-t{
+    font-size: 2rem;
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    font-weight: 200;
+    text-align: center;
+}
+.delete{
+    display: none;
+}
+
+
+
+#container{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #36d1dc, #5b86e5);
+}
+#user{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.1rem 0rem 0.4rem 0rem black;
+}
+#up{
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#today-event h3{
+    margin: 1rem;
+}
+#down{
+    height: 60%;
+}
+#avatar-container{
+    /* border: 1px solid brown; */
+    height: 12rem;
+    width: 12rem;
+    overflow: hidden;
+    border-radius: 6rem;
+}
+#avatar-container img{
+    filter: drop-shadow(0 0 0.2rem black);
+}
+
+.w-100{
+    width: 100% !important;
+}
+
+#calendar-container{
+    /* border: 2px solid green; */
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calendar{
+    /* border: 2px solid cyan; */
+    height: 55rem;
+    width: 95rem;
+    box-shadow: 0rem 0rem 0.2rem 0rem black;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+}
+#change{
+    display: flex;
+    width: 20rem;
+    justify-content: space-between;
+    align-items: center;
+}
+#change .btn{
+    background-color: transparent;
+    border:  none;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    font-weight: 700;
+}#change .btn:hover{
+    transform: scale(1.2);
+}
+
+#filters{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 13rem;
+    border: 0.2rem solid transparent;
+}
+#filters:focus, 
+#filters:hover{
+    outline: none;
+    border: 0.2rem solid rgba(206, 206, 206, 0.438);
+    border-radius: 0.5rem;
+}
+#filters option{
+    background-color: #5b86e5;
+    border: none;
+    box-shadow: none;
+}
+#month, #days, #event-view{
+    height: 80rem;
+}
+#days-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 5rem;
+}
+/* #days-container .day{
+} */
+
+.dates{
+    width: 100%;
+    height:44.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    /* border: 2px solid green; */
+}
+.date{
+    width: 13%;
+    height: 18%;
+    transition: all 0.1s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+}
+.not-padding{
+    background-color: rgba(255, 255, 255, 0.116);
+}
+.not-padding:hover{
+    border: 0.1rem solid cyan;
+    border-radius:0.4rem;   
+    background-color: rgba(255, 255, 255, 0.479);
+    color: black;
+    transform: scale(1.2);
+}
+.current{
+    background-color: #1c0dff8c;
+}.current:hover{
+    border: 2px solid cyan;
+    background-color: #1d0dffd0;
+    color: black;
+    transform: scale(1.2);
+}
+
+.day7{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.116);
+    width: 13%;
+    border: 0.1rem solid cyan;
+    border-radius:0.4rem;   
+}
+.day7:hover{
+    border: 0.1rem solid cyan;
+    border-radius:0.4rem;   
+    background-color: rgba(255, 255, 255, 0.479);
+    color: black;
+    transform: scale(1.03);
+}
+
+#day{
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.479);
+    border: 0.1rem solid cyan;
+    border-radius:0.4rem;   
+    height: 47.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-shadow: 0 0 0.5rem black;
+}
+#today-detail{
+    display: flex;
+    justify-content: space-between;
+}
+.event-month-view{
+    background-color: #005d80;
+    height: 3rem;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 0.2rem;
+    border: 0.2rem solid transparent;
+}
+.event-month-view:hover{
+    border: 0.2rem solid #00b84d;
+}
+.time-stamp, .event-title{
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Baloo 2', cursive;
+}
+
+#event-view{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+#event-view::-webkit-scrollbar {
+    width: 0.5rem;               /* width of the entire scrollbar */
+}
+  
+#event-view::-webkit-scrollbar-track {
+    background: inherit;        /* color of the tracking area */
+}
+  
+#event-view::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.596);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+#event-card{
+    background-color: #005d80;
+    height: 45%;
+    width: 30%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow-y: scroll;
+    margin: 1rem;
+}
+#event-card::-webkit-scrollbar {
+    width: 0.5rem;               /* width of the entire scrollbar */
+}
+  
+#event-card::-webkit-scrollbar-track {
+    background: inherit;        /* color of the tracking area */
+}
+  
+#event-card::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.596);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+#event-view-title{
+    color: white;
+    font-size: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.384);
+    margin: 0.8rem;
+}
+#event-details{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    font-family: 'Baloo 2', cursive
+}
+
+.today{
+    text-align: center;
+    margin: 1rem;
+    border-bottom: 0.1rem solid rgba(128, 128, 128, 0.377);
+}

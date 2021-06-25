@@ -1,0 +1,61 @@
+#input-container, #delete-container-background{
+    position:absolute;
+    top: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.658);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#input{
+    display: flex;
+    height: 35rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    width: 50rem;
+    background-image: linear-gradient(to right, #36d1dc, #5b86e5);
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem 0.01rem black;
+}
+#title, .time, #date{
+    height: 5rem;
+    font-size: 2rem;
+    border-radius: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.479);
+    margin: 1rem;
+    outline: none;
+    padding: 0.5rem;
+}#title{
+    width: 46rem;
+}.time, #date{
+    width: 21.7rem;
+}
+.button-area{
+    display: flex;
+    justify-content: space-between;
+}
+.button-area button{
+    height: 5rem;
+    width: 10rem;
+    font-size: 2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    background-color: rgba(255, 255, 255, 0.479);
+    border: 0.1rem solid rgb(0, 132, 255);
+    border-radius: 0.4rem;
+    color: white;
+    text-shadow: 1px 0 0 #0000008f, 0 -1px 0 #0000008f, 0 1px 0 #0000008f, -1px 0 0 #0000008f;
+}.button-area button:hover{
+    background-color: rgba(255, 255, 255, 0.63);
+    color: black;
+    text-shadow: 0 0 0 black;
+}
+.no-border{
+    border: none;
+}
+.error{
+    border: 0.1rem solid red;
+}
