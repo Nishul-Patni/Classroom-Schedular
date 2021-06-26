@@ -94,7 +94,7 @@ function loadTodayEventes(){
     let todayDate = `${tempDate.getFullYear()}-${m}-${d}`
     let container = document.getElementById("today-event");
     container.innerHTML = "";
-    container.innerHTML = `<h3 class="h">Today's Event</h3>`;
+    container.innerHTML = `<h3 class="h" style="text-align:center;">Today's Event</h3>`;
 
     todayEvents = events.filter(e=> e.date==todayDate)
     if(todayEvents.length){
